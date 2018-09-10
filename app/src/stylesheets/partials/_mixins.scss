@@ -1,0 +1,10 @@
+@mixin sizing($height, $width, $padding) {
+    height: $height;
+    width: $width;
+    margin: 20px auto;
+    padding: $padding;
+}
+
+@mixin border($color) {
+    border: thick double $color;
+}

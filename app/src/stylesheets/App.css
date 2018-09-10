@@ -3,3 +3,22 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #efefef; }
+
+#container {
+  max-width: 1080px;
+  margin: auto;
+  text-align: center; }
+
+#preview {
+  height: 70vh;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border: thick double black; }
+
+#editor {
+  height: 10vh;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border: thick double red; }

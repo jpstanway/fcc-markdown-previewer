@@ -7,3 +7,19 @@ body {
   font-family: sans-serif;
   background-color: #efefef;
 }
+
+#container {
+  max-width: 1080px;
+  margin: auto;
+  text-align: center;
+}
+
+#preview {
+  @include sizing(70vh, 90%, 20px);
+  @include border(black);
+}
+
+#editor {
+  @include sizing(10vh, 80%, 10px);
+  @include border(red);
+}
