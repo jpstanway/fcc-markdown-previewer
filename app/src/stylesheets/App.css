@@ -14,11 +14,14 @@ body {
   width: 90%;
   margin: 20px auto;
   padding: 20px;
-  border: thick double black; }
+  text-align: left;
+  border: thick double black;
+  background-color: white; }
 
 #editor {
   height: 10vh;
   width: 80%;
   margin: 20px auto;
   padding: 10px;
+  text-align: left;
   border: thick double red; }

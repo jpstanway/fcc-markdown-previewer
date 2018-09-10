@@ -3,6 +3,7 @@
     width: $width;
     margin: 20px auto;
     padding: $padding;
+    text-align: left;
 }
 
 @mixin border($color) {

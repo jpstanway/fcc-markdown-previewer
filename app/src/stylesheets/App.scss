@@ -17,6 +17,7 @@ body {
 #preview {
   @include sizing(70vh, 90%, 20px);
   @include border(black);
+  background-color: lighten(#efefef, 20%);
 }
 
 #editor {
