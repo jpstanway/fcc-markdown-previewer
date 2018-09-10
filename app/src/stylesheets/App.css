@@ -4,6 +4,12 @@ body {
   font-family: sans-serif;
   background-color: #efefef; }
 
+code {
+  background-color: white; }
+
+blockquote {
+  background-color: gray; }
+
 #container {
   max-width: 1080px;
   margin: auto;
@@ -16,7 +22,8 @@ body {
   padding: 20px;
   text-align: left;
   border: thick double black;
-  background-color: white; }
+  background-color: #bcbcbc;
+  overflow: auto; }
 
 #editor {
   height: 10vh;

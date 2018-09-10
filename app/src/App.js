@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Editor from './modules/editor';
 import Preview from './modules/preview';
+import Editor from './modules/editor';
+import defaultText from './modules/default-text';
 import './stylesheets/App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      previewText: ''
+      previewText: defaultText
     }
     this.handleChange = this.handleChange.bind(this);
   }
@@ -23,10 +24,10 @@ class App extends Component {
   render() {
     const { previewText } = this.state;
 
-    return (
+    return(
       <div id="container">
         <Preview text={previewText} />
-        <Editor handler={this.handleChange} />
+        <Editor val={previewText} handler={this.handleChange} />
       </div>
     );
   }

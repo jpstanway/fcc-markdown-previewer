@@ -8,6 +8,14 @@ body {
   background-color: #efefef;
 }
 
+code {
+  background-color: white;
+}
+
+blockquote {
+  background-color: darken(white, 50%);
+}
+
 #container {
   max-width: 1080px;
   margin: auto;
@@ -17,7 +25,8 @@ body {
 #preview {
   @include sizing(70vh, 90%, 20px);
   @include border(black);
-  background-color: lighten(#efefef, 20%);
+  background-color: darken(#efefef, 20%);
+  overflow: auto;
 }
 
 #editor {
