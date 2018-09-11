@@ -1,8 +1,12 @@
+@import 'https://use.fontawesome.com/releases/v5.3.1/css/all.css';
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: #efefef; }
+
+a:hover {
+  color: red; }
 
 code {
   background-color: white; }
@@ -32,6 +36,12 @@ blockquote {
   padding: 0px 5px;
   text-align: left;
   border: thick double #c1c1c1; }
+  #legend #legend-collapse {
+    cursor: pointer; }
+    #legend #legend-collapse #transition-div {
+      display: inline-block; }
+    #legend #legend-collapse:hover #collapser {
+      color: gray; }
   #legend #list-container {
     height: 100%;
     width: 90%;
