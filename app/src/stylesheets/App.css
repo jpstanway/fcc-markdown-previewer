@@ -16,7 +16,7 @@ blockquote {
   text-align: center; }
 
 #preview {
-  height: 70vh;
+  height: 65vh;
   width: 90%;
   margin: 20px auto;
   padding: 20px;
@@ -25,8 +25,39 @@ blockquote {
   background-color: #bcbcbc;
   overflow: auto; }
 
-#editor {
+#legend {
   height: 10vh;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0px 5px;
+  text-align: left;
+  border: thick double #c1c1c1; }
+  #legend #list-container {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: row; }
+  #legend .legend-list {
+    height: 100%;
+    width: 30%;
+    margin: 0;
+    padding: 0 10px;
+    text-align: left;
+    list-style-type: circle;
+    display: inline-block; }
+    #legend .legend-list li {
+      font-size: 0.9em;
+      line-height: 1.6em; }
+  #legend .char {
+    font-weight: bold; }
+  #legend .element {
+    font-style: italic; }
+
+#editor {
+  height: 12vh;
   width: 80%;
   margin: 20px auto;
   padding: 10px;

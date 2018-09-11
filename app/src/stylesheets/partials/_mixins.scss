@@ -1,7 +1,7 @@
-@mixin sizing($height, $width, $padding) {
+@mixin sizing($height, $width, $margin, $padding) {
     height: $height;
     width: $width;
-    margin: 20px auto;
+    margin: $margin;
     padding: $padding;
     text-align: left;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Preview from './modules/preview';
 import Editor from './modules/editor';
+import Legend from './modules/legend';
 import defaultText from './modules/default-text';
 import './stylesheets/App.css';
 
@@ -27,6 +28,7 @@ class App extends Component {
     return(
       <div id="container">
         <Preview text={previewText} />
+        <Legend />
         <Editor val={previewText} handler={this.handleChange} />
       </div>
     );

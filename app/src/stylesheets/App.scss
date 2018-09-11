@@ -23,13 +23,43 @@ blockquote {
 }
 
 #preview {
-  @include sizing(70vh, 90%, 20px);
+  @include sizing(65vh, 90%, 20px auto, 20px);
   @include border(black);
   background-color: darken(#efefef, 20%);
   overflow: auto;
 }
 
+#legend {
+  @include sizing(10vh, 80%, 0 auto, 0px 5px);
+  @include border(#c1c1c1);
+
+  #list-container {
+    @include sizing(100%, 90%, 0 auto, 0);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .legend-list {
+    @include sizing(100%, 30%, 0, 0 10px);
+    list-style-type: circle;
+    display: inline-block;
+
+    li {
+      font-size: 0.9em;
+      line-height: 1.6em;
+    }
+  }
+
+  .char {
+    font-weight: bold;
+  }
+
+  .element {
+    font-style: italic;
+  }
+}
+
 #editor {
-  @include sizing(10vh, 80%, 10px);
+  @include sizing(12vh, 80%, 20px auto, 10px);
   @include border(red);
 }
