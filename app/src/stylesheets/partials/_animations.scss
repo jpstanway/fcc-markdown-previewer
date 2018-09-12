@@ -1,0 +1,18 @@
+
+.collapse-enter {
+    opacity: 0;
+}
+
+.collapse-enter.collapse-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.collapse-exit {
+    opacity: 1;
+}
+
+.collapse-exit.collapse-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}

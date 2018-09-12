@@ -38,17 +38,13 @@ blockquote {
 }
 
 #legend {
-  @include sizing(10vh, 80%, 0 auto, 0px 5px);
+  @include sizing(auto, 80%, 0 auto, 0px 5px);
   @include border(#c1c1c1);
 
   
 
   #legend-collapse {
     cursor: pointer;
-
-    #transition-div {
-      display: inline-block;
-    }
 
     &:hover {
       #collapser {
@@ -61,6 +57,7 @@ blockquote {
     @include sizing(100%, 90%, 0 auto, 0);
     display: flex;
     flex-direction: row;
+    position: relative;
   }
 
   .legend-list {

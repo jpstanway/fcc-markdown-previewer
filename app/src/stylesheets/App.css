@@ -1,4 +1,18 @@
 @import 'https://use.fontawesome.com/releases/v5.3.1/css/all.css';
+.collapse-enter {
+  opacity: 0; }
+
+.collapse-enter.collapse-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.collapse-exit {
+  opacity: 1; }
+
+.collapse-exit.collapse-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in; }
+
 body {
   margin: 0;
   padding: 0;
@@ -30,7 +44,7 @@ blockquote {
   overflow: auto; }
 
 #legend {
-  height: 10vh;
+  height: auto;
   width: 80%;
   margin: 0 auto;
   padding: 0px 5px;
@@ -38,8 +52,6 @@ blockquote {
   border: thick double #c1c1c1; }
   #legend #legend-collapse {
     cursor: pointer; }
-    #legend #legend-collapse #transition-div {
-      display: inline-block; }
     #legend #legend-collapse:hover #collapser {
       color: gray; }
   #legend #list-container {
@@ -49,7 +61,8 @@ blockquote {
     padding: 0;
     text-align: left;
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    position: relative; }
   #legend .legend-list {
     height: 100%;
     width: 30%;
