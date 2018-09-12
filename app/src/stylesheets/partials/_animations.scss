@@ -5,7 +5,7 @@
 
 .collapse-enter.collapse-enter-active {
     opacity: 1;
-    transition: opacity 500ms ease-in;
+    transition: opacity 300ms ease-in;
 }
 
 .collapse-exit {
@@ -14,5 +14,5 @@
 
 .collapse-exit.collapse-exit-active {
     opacity: 0;
-    transition: opacity 500ms ease-in;
+    transition: opacity 100ms linear;
 }

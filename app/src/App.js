@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import Preview from './modules/preview';
 import Editor from './modules/editor';
 import Legend from './modules/legend';
-import LegendList from './modules/legend-list';
 import defaultText from './modules/default-text';
-import ICONS from './modules/icons';
+import LegendStatus from './modules/legend-status';
 import './stylesheets/App.css';
 
 class App extends Component {
@@ -12,13 +11,12 @@ class App extends Component {
     super(props);
     this.state = {
       previewText: defaultText,
-      legendList: <div></div>,
-      icons: ICONS,
-      collapsed: "legendClose"
+      legend: LegendStatus,
+      toggleLegend: "closed"
     }
     this.handleChange = this.handleChange.bind(this);
-    this.getIcon = this.getIcon.bind(this);
-    this.toggleCollapse = this.toggleCollapse.bind(this);
+    this.handleLegend = this.handleLegend.bind(this);
+    this.toggleLegend = this.toggleLegend.bind(this);
   }
 
   handleChange(event) {
@@ -26,30 +24,29 @@ class App extends Component {
     
     this.setState({
       previewText: text
-    })
+    });
   }
 
-  getIcon() {
-    return this.state.icons[this.state.collapsed];
+  handleLegend() {
+    const status = this.state.toggleLegend;
+    return this.state.legend[status];
   }
 
-  toggleCollapse() {
-    const toggle = this.state.collapsed === "legendClose" ? "legendOpen" : "legendClose";
-    const list = toggle === "legendClose" ? <div></div> : <LegendList />;
-
+  toggleLegend() {
+    const legend = this.state.toggleLegend === "opened" ? "closed" : "opened";
+    
     this.setState({
-      legendList: list,
-      collapsed: toggle
+      toggleLegend: legend
     });
   }
 
   render() {
-    const { previewText, legendList, collapsed } = this.state;
+    const { previewText } = this.state;
 
     return(
       <div id="container">
         <Preview text={previewText} />
-        <Legend icon={this.getIcon()} toggle={this.toggleCollapse} list={legendList} status={collapsed} />
+        <Legend toggle={this.toggleLegend} legend={this.handleLegend()} />
         <Editor val={previewText} handler={this.handleChange} />
       </div>
     );

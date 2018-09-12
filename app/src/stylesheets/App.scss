@@ -39,9 +39,6 @@ blockquote {
 
 #legend {
   @include sizing(auto, 80%, 0 auto, 0px 5px);
-  @include border(#c1c1c1);
-
-  
 
   #legend-collapse {
     cursor: pointer;
