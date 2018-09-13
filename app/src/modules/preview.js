@@ -17,7 +17,7 @@ renderer.link = function(href, title, text) {
 const Preview = (props) => {
   return(
     <div>
-      <h3>Preview</h3>
+      <h3 id="preview-title">Preview</h3>
       <div id="preview" dangerouslySetInnerHTML={{__html: Marked(props.text, { renderer: renderer })}}></div>
     </div>
   );

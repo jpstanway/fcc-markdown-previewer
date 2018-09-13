@@ -6,6 +6,8 @@
     text-align: left;
 }
 
-@mixin border($color) {
-    border: thick double $color;
+@mixin border($border) {
+    border: $border;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 2px darken(white, 30%);
 }

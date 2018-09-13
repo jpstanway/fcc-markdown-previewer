@@ -36,13 +36,22 @@ blockquote {
   margin: auto;
   text-align: center; }
 
-#preview {
-  height: 65vh;
+#preview-title {
+  height: auto;
   width: 90%;
-  margin: 20px auto;
+  margin: 18px auto 2px auto;
+  padding: 0;
+  text-align: left; }
+
+#preview {
+  height: 60vh;
+  width: 90%;
+  margin: 0px auto 20px auto;
   padding: 20px;
   text-align: left;
-  border: thick double black;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 2px #b3b3b3;
   background-color: #efefef;
   overflow: auto; }
 
@@ -56,8 +65,10 @@ blockquote {
   background-color: #dcdcdc; }
   #legend #legend-collapse {
     cursor: pointer; }
+    #legend #legend-collapse #collapser {
+      color: #000080; }
     #legend #legend-collapse:hover #collapser {
-      color: gray; }
+      color: #8080ff; }
   #legend #list-container {
     height: 100%;
     width: 90%;
@@ -83,13 +94,22 @@ blockquote {
   #legend .element {
     font-style: italic; }
 
+#editor-title {
+  height: auto;
+  width: 80%;
+  margin: 18px auto 2px auto;
+  padding: 0;
+  text-align: left; }
+
 #editor {
   height: 12vh;
   width: 80%;
-  margin: 20px auto;
+  margin: 0px auto 20px auto;
   padding: 10px;
   text-align: left;
-  border: thick double red;
+  border: 2px solid #800000;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 2px #b3b3b3;
   background-color: #efefef;
   font-family: "Inconsolata", monospace;
   font-size: 0.9em; }

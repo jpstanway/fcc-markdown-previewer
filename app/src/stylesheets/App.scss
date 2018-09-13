@@ -33,10 +33,13 @@ blockquote {
   text-align: center;
 }
 
+#preview-title {
+  @include sizing(auto, 90%, 18px auto 2px auto, 0);
+}
+
 #preview {
-  @include sizing(65vh, 90%, 20px auto, 20px);
-  @include border(black);
-  
+  @include sizing(60vh, 90%, 0px auto 20px auto, 20px);
+  @include border(none);
   background-color: $main-bg-color;
   overflow: auto;
 }
@@ -49,9 +52,13 @@ blockquote {
   #legend-collapse {
     cursor: pointer;
 
+    #collapser {
+      color: $legend-icon-color;
+    }
+
     &:hover {
       #collapser {
-        color: lighten(black, 50%);
+        color: lighten($legend-icon-color, 50%);
       }
     }
   }
@@ -83,9 +90,13 @@ blockquote {
   }
 }
 
+#editor-title {
+  @include sizing(auto, 80%, 18px auto 2px auto, 0);
+}
+
 #editor {
-  @include sizing(12vh, 80%, 20px auto, 10px);
-  @include border(red);
+  @include sizing(12vh, 80%, 0px auto 20px auto, 10px);
+  @include border(2px solid $editor-border-color);
   background-color: $main-bg-color;
   font-family: $editor-text;
   font-size: 0.9em;
