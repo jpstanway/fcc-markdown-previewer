@@ -42,12 +42,22 @@ blockquote {
   @include border(none);
   background-color: $main-bg-color;
   overflow: auto;
+
+  @media screen and (max-width: 430px) {
+    width: 85%;
+    border: 1px solid black;
+    box-shadow: none;
+  }
 }
 
 #legend {
   @include sizing(auto, 80%, 0 auto, 0px 5px);
   font-family: $preview-text;
   background-color: $legend-bg-color;
+
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
 
   #legend-collapse {
     cursor: pointer;
@@ -68,6 +78,11 @@ blockquote {
     display: flex;
     flex-direction: row;
     position: relative;
+
+    @media screen and (max-width: 770px) {
+      height: 70px;
+      overflow: auto;
+    }
   }
 
   .legend-list {
@@ -100,4 +115,9 @@ blockquote {
   background-color: $main-bg-color;
   font-family: $editor-text;
   font-size: 0.9em;
+
+  @media screen and (max-width: 430px) {
+    height: 16vh;
+    box-shadow: none;
+  }
 }
