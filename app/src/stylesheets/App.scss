@@ -17,14 +17,25 @@ a {
   }
 }
 
+pre > code {
+    display: block;
+    padding: 10px 20px;
+}
+
 code {
-  padding: 2px;
+  padding: 3px;
   font-family: $editor-text;
   background-color: $body-bg-color;
 }
 
 blockquote {
-  background-color: darken(#efefef, 5%);
+  padding-left: 5px;
+  border-left: 4px solid darken(#efefef, 30%);
+  font-style: italic;
+}
+
+blockquote > p {
+  margin: 0;
 }
 
 #container {
