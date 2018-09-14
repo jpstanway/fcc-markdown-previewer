@@ -1,0 +1,134 @@
+@import 'https://use.fontawesome.com/releases/v5.3.1/css/all.css';
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Karla:400,700');
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/animations';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $preview-text;
+  background-color: $body-bg-color;
+}
+
+a {
+  &:hover {
+    color: red;
+  }
+}
+
+pre > code {
+    display: block;
+    padding: 10px 20px;
+}
+
+code {
+  padding: 3px;
+  font-family: $editor-text;
+  background-color: $body-bg-color;
+}
+
+blockquote {
+  padding-left: 5px;
+  border-left: 4px solid darken(#efefef, 30%);
+  font-style: italic;
+}
+
+blockquote > p {
+  margin: 0;
+}
+
+#container {
+  max-width: 1080px;
+  margin: auto;
+  text-align: center;
+}
+
+#preview-title {
+  @include sizing(auto, 90%, 18px auto 2px auto, 0);
+}
+
+#preview {
+  @include sizing(60vh, 90%, 0px auto 20px auto, 20px);
+  @include border(none);
+  background-color: $main-bg-color;
+  overflow: auto;
+
+  @media screen and (max-width: 430px) {
+    width: 85%;
+    border: 1px solid black;
+    box-shadow: none;
+  }
+}
+
+#legend {
+  @include sizing(auto, 80%, 0 auto, 0px 5px);
+  font-family: $preview-text;
+  background-color: $legend-bg-color;
+
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
+
+  #legend-collapse {
+    cursor: pointer;
+
+    #collapser {
+      color: $legend-icon-color;
+    }
+
+    &:hover {
+      #collapser {
+        color: lighten($legend-icon-color, 50%);
+      }
+    }
+  }
+  
+  #list-container {
+    @include sizing(100%, 90%, 0 auto, 2px);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    @media screen and (max-width: 770px) {
+      height: 70px;
+      overflow: auto;
+    }
+  }
+
+  .legend-list {
+    @include sizing(100%, 30%, 0, 0 10px);
+    list-style-type: circle;
+    display: inline-block;
+
+    li {
+      font-size: 0.9em;
+      line-height: 1.6em;
+    }
+  }
+
+  .char {
+    font-weight: bold;
+  }
+
+  .element {
+    font-style: italic;
+  }
+}
+
+#editor-title {
+  @include sizing(auto, 80%, 18px auto 2px auto, 0);
+}
+
+#editor {
+  @include sizing(12vh, 80%, 0px auto 20px auto, 10px);
+  @include border(2px solid $editor-border-color);
+  background-color: $main-bg-color;
+  font-family: $editor-text;
+  font-size: 0.9em;
+
+  @media screen and (max-width: 430px) {
+    height: 16vh;
+    box-shadow: none;
+  }
+}
