@@ -1,4 +1,4 @@
-FCC Markdown Previewer project (Front End Libraries Certificate)
+# FCC Markdown Previewer project (Front End Libraries Certificate)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
