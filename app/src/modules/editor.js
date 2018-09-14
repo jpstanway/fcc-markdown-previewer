@@ -8,7 +8,7 @@ const Editor = (props) => {
                 id="editor" 
                 value={props.val} 
                 onChange={props.handler}
-                onKeyDown={props.keydown}
+                onKeyUp={props.keyup}
             ></textarea>
         </div>
     );

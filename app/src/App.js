@@ -11,11 +11,12 @@ class App extends Component {
     super(props);
     this.state = {
       previewText: defaultText,
+      editorText: defaultText,
       legend: LegendStatus,
       toggleLegend: "closed"
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleLegend = this.handleLegend.bind(this);
     this.toggleLegend = this.toggleLegend.bind(this);
   }
@@ -24,17 +25,24 @@ class App extends Component {
     const text = event.target.value;
 
     this.setState({
-      previewText: text
+      previewText: text,
+      editorText: text
     });
   }
 
-  handleKeyDown(event) {
-    let text = event.target.value;
-    const spaces = '  ';
-    const startPos = event.target.selectionStart;
-    const endPos = event.target.selectionEnd;
+  handleKeyUp(event) {
+    if(event.keyCode === 13) {
+      let text = event.target.value;
+      const spaces = '  ';
+      const startPos = event.target.selectionStart;
+      const endPos = event.target.selectionEnd;
 
-    text = text.substring(0, startPos) + spaces + text.substring(endPos, text.length);
+      text = text.substring(0, startPos) + spaces + text.substring(endPos, text.length);
+
+      this.setState({
+        previewText: text
+      });
+    }
   }
 
   handleLegend() {
@@ -51,13 +59,13 @@ class App extends Component {
   }
 
   render() {
-    const { previewText } = this.state;
+    const { previewText, editorText } = this.state;
 
     return(
       <div id="container">
         <Preview text={previewText} />
         <Legend toggle={this.toggleLegend} legend={this.handleLegend()} />
-        <Editor val={previewText} handler={this.handleChange} keydown={this.handleKeyDown} />
+        <Editor val={editorText} handler={this.handleChange} keyup={this.handleKeyUp} />
       </div>
     );
   }

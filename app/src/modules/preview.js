@@ -3,6 +3,7 @@ import Marked from 'marked';
 
 // set GitHub Flavored Markdown to true in Marked options
 Marked.setOptions({
+  breaks: true,
   gfm: true
 });
 
@@ -18,7 +19,7 @@ const Preview = (props) => {
   return(
     <div>
       <h3 id="preview-title">Preview</h3>
-      <div id="preview" dangerouslySetInnerHTML={{__html: Marked(props.text, { renderer: renderer })}}></div>
+      <pre id="preview" dangerouslySetInnerHTML={{__html: Marked(props.text, { renderer: renderer })}}></pre>
     </div>
   );
 };
