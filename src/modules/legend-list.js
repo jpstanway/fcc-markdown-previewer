@@ -1,5 +1,7 @@
 import React from 'react';
 
+// list items animated into legend when expanded
+
 const LegendList = () => {
     return(
         <div id="list-container">

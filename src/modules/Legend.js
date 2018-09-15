@@ -1,6 +1,8 @@
 import React from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+// legend component with helpful information for users
+// toggled close by default
 const Legend = (props) => {
     return(
         <fieldset id="legend">

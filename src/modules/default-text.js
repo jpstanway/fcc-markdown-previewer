@@ -1,4 +1,6 @@
 
+// default text loaded into preview and editor on load
+
 let defaultText = '';
 defaultText += '# This is a header\n\n';
 defaultText += '## This is a sub-header\n\n';

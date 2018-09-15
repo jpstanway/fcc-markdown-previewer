@@ -1,6 +1,7 @@
 import React from 'react';
 import LegendList from './legend-list';
 
+// open and close state for legend component
 const LegendStatus = {
     opened: {
         icon: <i id="collapser" className="fas fa-minus-circle"></i>,

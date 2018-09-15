@@ -21,6 +21,7 @@ class App extends Component {
     this.toggleLegend = this.toggleLegend.bind(this);
   }
 
+  // update preview and editor values as user types
   handleChange(event) {
     const text = event.target.value;
 
@@ -30,6 +31,7 @@ class App extends Component {
     });
   }
 
+  // creates <br> tag from user pressing the Enter key to go to next line
   handleKeyUp(event) {
     if(event.keyCode === 13) {
       let text = event.target.value;
@@ -45,11 +47,13 @@ class App extends Component {
     }
   }
 
+  // get legend ui based on toggle state
   handleLegend() {
     const status = this.state.toggleLegend;
     return this.state.legend[status];
   }
 
+  // set legend toggle state
   toggleLegend() {
     const legend = this.state.toggleLegend === "opened" ? "closed" : "opened";
     
